@@ -14,7 +14,7 @@ public class MathRecursion {
    * @param number A number (note too high will cause a stack overflow)
    * @return number * number - 1 or 1 (if number is 0)
    */
-  protected static long factorial(int number)
+  protected long factorial(int number)
   {
     if (number == 1)
         return 1;
