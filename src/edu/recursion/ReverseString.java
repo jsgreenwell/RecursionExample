@@ -2,7 +2,7 @@ package edu.recursion;
 
 /**
  * Typically I would not put this in a seperate class
- * However, here is a recursive reverseString method
+ * However, here is a recursive ReverseString method
  *
  * It checks to see if there is only 1 character in the string
  *    returns that character if it is
@@ -14,7 +14,15 @@ package edu.recursion;
  *            added to this one
  *            or The last, then next to last, then next to next to last, ....
  */
-public class reverseString {
+public class ReverseString {
+
+  /**
+   * See description of class
+   * @return The default string: Hello World!
+   */
+  protected static String reverse() {
+    return reverse("Hello World!");
+  }
 
   /**
    * See description of class
