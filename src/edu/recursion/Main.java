@@ -1,5 +1,7 @@
 package edu.recursion;
 
+// TODO: Add lambdas factorial example (recursive)
+
 public class Main {
 
     public static void main(String[] args) {

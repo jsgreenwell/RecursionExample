@@ -1,6 +1,7 @@
 package edu.recursion;
 
 public class MathRecursion {
+  // TODO: add iterative approach (using stream)
 
   /**
    * Calculate the sum of a series of numbers starting at 1
