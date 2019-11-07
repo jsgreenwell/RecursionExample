@@ -68,7 +68,7 @@ public class MathRecursion {
   {
     long factorial = 1;
 
-    for (int i = 2; i < stopNum; ++i)
+    for (int i = 2; i <= stopNum; ++i)
     {
       factorial *= i;
     }
