@@ -32,6 +32,7 @@ public class MathRecursion {
         return number * computePowers(number, exp - 1);
     }
   }
+
   /**
    * This is probably the most frequently used example
    * Function, through its variable assignment, is passed an integer (4)
@@ -49,6 +50,29 @@ public class MathRecursion {
         return 1;
     else
         return number * factorial(number-1);
+  }
+
+  /**
+   * So you can time & see the difference yourselves
+   * Function is passed to stopping number for the factorial
+   *   which it uses as the stop point of a for loop which
+   *      multiplies an increasing factorial by each number until the
+   *      provided stopNum is reached
+   *   or doesn't run in the case of 0
+   *
+   * @param stopNum Number to stop at (no worries about stack overflow)
+   *                Can still overflow "long"
+   * @return factorial result of multiplications
+   */
+  protected long factorialLoop(final int stopNum)
+  {
+    long factorial = 1;
+
+    for (int i = 2; i < stopNum; ++i)
+    {
+      factorial *= i;
+    }
+    return factorial;
   }
 
 
