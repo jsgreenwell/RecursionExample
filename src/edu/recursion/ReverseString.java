@@ -29,7 +29,7 @@ public class ReverseString {
    * @param userString String passed by user (can be any alphanumeric string)
    * @return userString (in reverse)
    */
-  protected static String reverse(String userString) {
+  protected static String reverse(final String userString) {
     if (userString.length() == 1) {
       return userString;
     }

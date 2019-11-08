@@ -9,10 +9,11 @@ public class MathRecursion {
    * @return The number or the number plus the recursive function
    */
   protected int sumSeries(final int number) {
-    if (number > 0) {
-      return number + sumSeries(number - 1);
-    } else {
+    // Assumes positive numbers so just return if less
+    if (number <= 0) {
       return number;
+    } else {
+      return number + sumSeries(number - 1);
     }
   }
 
