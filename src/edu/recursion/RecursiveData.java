@@ -1,17 +1,18 @@
 package edu.recursion;
 
 // TODO Add comments & call in main (want to use this as Class recursion exmaple)
+// TODO Add File.io example & Stream Example & LinkList example
 
-public class TreeRecursion {
+public class RecursiveData {
   public int data;
-  public TreeRecursion left;
-  public TreeRecursion right;
+  public RecursiveData left;
+  public RecursiveData right;
 
-  public TreeRecursion(int data){
+  public RecursiveData(int data){
     this.data = data;
   }
 
-  public static void orderedTraversal(TreeRecursion root) {
+  public static void orderedTraversal(RecursiveData root) {
     if (root != null) {
       orderedTraversal(root.left); // traverse left sub tree
       System.out.print(root.data + " "); // traverse current node
