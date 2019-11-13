@@ -1,6 +1,9 @@
 package edu.recursion;
 
+import java.util.Date;
 import java.util.function.UnaryOperator;
+
+// TODO finish builder class (actually extend it) or remove...not sure if I want it
 
 public class Main {
 
@@ -18,6 +21,28 @@ public class Main {
       // See right above main for were this is defined (Unary is a provided FI)
       // System.out.println(factorialL(10));
       // This works in Eclipse but a bug in IntelliJ stops it
+
+      /** Because this is important: This is the "builder design pattern"
+       * Basically we created a class User which is used as a template
+       * However, its a pain to add a constructor for ever possible user
+       *    creation. Like with dateofBirth or without and etc.
+       * So we instead extend the class with a builder which inherets all
+       *    the information for our template and then make
+       *    all the constructors for each individual attribute.
+       * We then add one .build method which runs each of these.
+       * This allows the call in Main to only construct want is needed.
+       */
+      Users user = new UserBuilder()
+          .withFirstName("Bob")
+          .withUserName("KingBob")
+          .withLastName("Minion")
+          .withDateOfBirth(new Date(1972, 4, 15))
+          .withHouseNumber(125)
+          .withStreetAddress("Buckingham Palace")
+          .withCity("London")
+          .withState("")
+          .withZipcode(11125)
+          .build();
 
 
       System.out.println(ReverseString.reverse());
