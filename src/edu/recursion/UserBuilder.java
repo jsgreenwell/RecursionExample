@@ -18,7 +18,7 @@ public class UserBuilder extends Users {
     // yes, you need the constructor (not overridden)
   }
 
-
+  // The below methods will be used with a "with" to build a class with a lot of varying constructor parameters
   public UserBuilder withFirstName(final String firstName) {
     this.firstName = firstName;
     return this;
