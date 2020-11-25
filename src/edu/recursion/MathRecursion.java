@@ -56,6 +56,18 @@ public class MathRecursion {
     }
     return factorial;
   }
-
+  
+  /**
+  * Recursive factorial function
+  * @param number Number to calculate factorial for
+  * @return the Number * Number - 1 (until 1 reached then 1)
+  */
+  protected long factorial(final int number) {
+    if (number == 1) {
+      return 1;
+    } else {
+      return number * factorial(number-1);
+    }
+  }
 
 }
