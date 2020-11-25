@@ -4,6 +4,11 @@ import java.util.Date;
 
 public class UserBuilder extends Users {
 
+  /**
+  UserBuilder class: Used with Builder design pattern to allow for 
+                     class creation with multiple, variable, parameters.
+  */
+  
   private String firstName;
   private String lastName;
   private String userName;
@@ -64,6 +69,9 @@ public class UserBuilder extends Users {
     return this;
   }
 
+  /**
+  Constructor for UserBuilder class given all paramenters.
+  */
   public UserBuilder(String firstName, String lastName, String userName,
       Date dateOfBirth, int houseNumber, String streetAddress,
       String city, String state, int zipcode)
@@ -79,6 +87,7 @@ public class UserBuilder extends Users {
     this.zipcode = zipcode;
   }
 
+  // On class completion ("with"s ran) we build the parent User class with all variables set.
   public UserBuilder build() {
     return new UserBuilder(
         firstName,
