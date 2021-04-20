@@ -70,4 +70,16 @@ public class MathRecursion {
     }
   }
 
+  /**
+   * Series descalation (cubic) divide by 3 each number and return result
+   * @param threshold stop after this number reached (return final result)
+   * @return the Number * Number * Number (until 1 reached then 1)
+   */
+  protected long cubic(final int threshold) {
+    if (threshold <= 1) {
+      return threshold;
+    } else {
+      return threshold / cubic(threshold-1);
+    }
+  }
 }
